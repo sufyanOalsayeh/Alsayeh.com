@@ -588,6 +588,77 @@ section {
 
 .projects-footer { text-align: center; }
 
+.projects-sublabel {
+  font-size: 0.78rem;
+  color: var(--green);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+/* Research paper cards */
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.paper-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  transition: border-color var(--transition), transform var(--transition);
+  cursor: pointer;
+}
+.paper-card:hover {
+  border-color: rgba(88,166,255,0.4);
+  transform: translateY(-2px);
+}
+
+.paper-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paper-icon { color: var(--blue); font-size: 1rem; }
+
+.paper-link-icon {
+  width: 14px; height: 14px;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.paper-card:hover .paper-link-icon { color: var(--blue); }
+
+.paper-card h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  transition: color var(--transition);
+}
+.paper-card:hover h4 { color: var(--blue); }
+
+.paper-card p {
+  font-size: 0.795rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.paper-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.paper-tags .tag {
+  color: var(--blue);
+  background: rgba(88,166,255,0.1);
+}
+
 /* ─────────────────────────────────────────
    Resume
 ───────────────────────────────────────── */
@@ -815,6 +886,7 @@ footer {
   .about-grid   { grid-template-columns: 1fr; gap: 2.5rem; }
   .skills-grid  { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: 1fr; }
+  .papers-grid   { grid-template-columns: 1fr; }
   .resume-cols  { grid-template-columns: 1fr; gap: 0; }
 }
 
