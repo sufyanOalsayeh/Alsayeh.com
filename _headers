@@ -1,5 +1,25 @@
 /*
+  # Force HTTPS and prevent downgrade attacks
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Block clickjacking
   X-Frame-Options: DENY
+
+  # Prevent MIME-type sniffing
   X-Content-Type-Options: nosniff
+
+  # Control referrer information
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+  # Disable browser features not needed on a static portfolio
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+
+  # Cross-origin isolation
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Content Security Policy
+  # - Only load scripts/styles from self and Google Fonts
+  # - No inline scripts, no eval, no object embeds, no iframes
+  # - Upgrade any accidental http requests to https
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests;

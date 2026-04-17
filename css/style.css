@@ -588,6 +588,8 @@ section {
 
 .projects-footer { text-align: center; }
 
+.papers-sublabel { margin-top: 3rem; }
+
 .projects-sublabel {
   font-size: 0.78rem;
   color: var(--green);
