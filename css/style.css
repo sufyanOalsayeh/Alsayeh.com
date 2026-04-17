@@ -510,6 +510,10 @@ section {
   gap: 1.25rem;
 }
 
+.projects-grid .project-card:nth-child(n+3) {
+  /* smaller cards after the 2 featured */
+}
+
 .project-card {
   background: var(--bg2);
   border: 1px solid var(--border);
